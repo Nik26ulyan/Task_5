@@ -17,18 +17,16 @@ public class Main {
     }
 
     static int readSizeOfFigure(String text) {
-        Scanner scanner = new Scanner(System.in);
         System.out.print(text);
+        Scanner scanner = new Scanner(System.in);
         int s;
 
         if (scanner.hasNextInt()) {
             s = scanner.nextInt();
-
             if (s < 5 || s % 2 == 0) {
                 System.out.println("Invalid value! Number can't be even adn less than five. Try again.");
                 return readSizeOfFigure(text);
             }
-
         } else {
             System.out.println("Invalid value! You need to enter a INTEGER NUMBER. Try again.");
             return readSizeOfFigure(text);
@@ -51,12 +49,7 @@ public class Main {
             System.out.println();
         }
 
-        System.out.print("|");
-
         drawMiddleLineOfFigure(s);
-
-        System.out.print("|");
-        System.out.println();
 
         for (int i = 0; i < tmp; i++) {
             System.out.print("|");
@@ -106,9 +99,14 @@ public class Main {
     }
 
     static void drawMiddleLineOfFigure(int s) {
+        System.out.print("|");
+
         for (int i = 0; i < s; i++) {
             System.out.print("*");
         }
+
+        System.out.print("|");
+        System.out.println();
     }
 
     static void drawLowerPartOfFigure(int i, int tmp) {
