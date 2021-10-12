@@ -75,27 +75,19 @@ public class Main {
     }
 
     static void drawUpperPartOfFigure(int i, int tmp) {
-        for (int j = tmp - i; j < tmp; j++) {
-            System.out.print(" ");
-        }
+        drawIncreasingNumberOfSpaces(i, tmp);
 
         System.out.print("*");
 
-        for (int k = tmp - i; k > 1; k--) {
-            System.out.print(" ");
-        }
+        drawDecreasingNumberOfSpaces(i, tmp);
 
         System.out.print("*");
 
-        for (int k = tmp - i; k > 1; k--) {
-            System.out.print(" ");
-        }
+        drawDecreasingNumberOfSpaces(i, tmp);
 
         System.out.print("*");
 
-        for (int k = tmp - i; k < tmp; k++) {
-            System.out.print(" ");
-        }
+        drawIncreasingNumberOfSpaces(i, tmp);
     }
 
     static void drawMiddleLineOfFigure(int s) {
@@ -110,24 +102,28 @@ public class Main {
     }
 
     static void drawLowerPartOfFigure(int i, int tmp) {
-        for (int k = tmp - i; k > 1; k--) {
-            System.out.print(" ");
-        }
+        drawDecreasingNumberOfSpaces(i, tmp);
 
         System.out.print("*");
 
-        for (int k = tmp - i; k < tmp; k++) {
-            System.out.print(" ");
-        }
+        drawIncreasingNumberOfSpaces(i, tmp);
 
         System.out.print("*");
 
+        drawIncreasingNumberOfSpaces(i, tmp);
+
+        System.out.print("*");
+
+        drawDecreasingNumberOfSpaces(i, tmp);
+    }
+
+    static void drawIncreasingNumberOfSpaces(int i, int tmp) {
         for (int j = tmp - i; j < tmp; j++) {
             System.out.print(" ");
         }
+    }
 
-        System.out.print("*");
-
+    static void drawDecreasingNumberOfSpaces(int i, int tmp) {
         for (int k = tmp - i; k > 1; k--) {
             System.out.print(" ");
         }
